@@ -1,0 +1,10 @@
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-heading-icon {
+  height: 2rem;
+  margin: 0 0.5rem;
+}

@@ -1,0 +1,20 @@
+.movie-list-container {
+  padding-top: 2rem;
+}
+
+.movie-list-title {
+  border-left: 0.4rem solid var(--primary-color);
+  padding: 0.5rem 0.7rem;
+}
+
+.movie-list-wrapper {
+  padding: 1rem 0;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 2rem;
+}

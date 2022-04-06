@@ -1,0 +1,19 @@
+/* .container {
+  background-color: var(--dark-bg);
+  min-height: calc(100vh - 50px);
+  color: var(--white-color);
+  padding: 1rem 4rem;
+  box-sizing: border-box;
+  width: 100%;
+} */
+
+.single-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.more-movie-list-container {
+  flex-basis: 25%;
+}
