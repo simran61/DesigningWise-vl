@@ -1,0 +1,13 @@
+.video-desc {
+  padding: 5px 0;
+}
+
+.channel-details {
+  padding-top: 0;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}

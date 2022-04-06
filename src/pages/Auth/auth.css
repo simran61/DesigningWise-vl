@@ -1,0 +1,24 @@
+.form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--light-bg);
+  margin: 3rem auto;
+  box-shadow: 5px 5px 18px var(--black-color);
+}
+
+.input_box_div {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.chechbox_text {
+  color: var(--white-color);
+}
+
+.center_txt {
+  text-align: center;
+  margin: 0.7rem;
+  color: var(--white-color);
+}

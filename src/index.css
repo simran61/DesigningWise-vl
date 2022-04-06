@@ -1,13 +1,122 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+:root {
+  --primary-color: rgb(2, 136, 189);
+  --primary-md-color: rgb(3, 98, 136);
+  --white-color: rgb(255, 255, 255);
+  --dull-white: rgb(243, 242, 242);
+  --grey-color: rgb(216, 216, 216);
+  --grey-md-color: rgb(182, 182, 182);
+  --black-color: rgb(0, 0, 0);
+  --dull-black: rgb(51, 51, 51);
+  --light-bg: rgb(48, 65, 85);
+  --md-bg: rgb(12, 37, 66);
+  --dark-bg: rgb(10, 18, 31);
+  --gold-color: goldenrod;
+}
+
+::-webkit-scrollbar {
+  width: 0.44rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2rem var(--black-color);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-md-color);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--dark-bg);
+}
+
+.margin_sm {
+  margin: 0.5rem 0;
+}
+
+.fs-md {
+  font-size: 1.1rem;
+}
+
+.fs-sm {
+  font-size: 0.9rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.grey-txt {
+  color: var(--grey-color);
+}
+
+.theme-color {
+  color: var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+}
+
+.border-left {
+  padding: 0.3rem 0.5rem;
+  border-left: 0.3rem solid var(--primary-color);
+}
+
+.container {
+  background-color: var(--dark-bg);
+  color: var(--white-color);
+  padding: 1rem 4rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.container.active {
+  background-color: var(--dull-white);
+  color: var(--black-color);
+}
+
+@media only screen and (max-width: 940px) {
+  :root {
+    font-size: 0.9rem;
+  }
+  .container {
+    padding: 1rem 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  :root {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .categories {
+    justify-content: center;
+  }
+
+  .select-btns {
+    margin: 1rem 0;
+  }
 }
