@@ -1,5 +1,4 @@
 export const videos = [
-  // TRENDING VIDEOS
   {
     _id: "o_HyfLLtuKQ",
     category: "Painting",
@@ -12,6 +11,9 @@ export const videos = [
     publishDate: "12th Mar'21",
     views: "45.2k views",
     subscribers: "484k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -40,6 +42,9 @@ export const videos = [
     publishDate: "14th Mar'18",
     views: "45.2k views",
     subscribers: "484k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Yashika Shukla",
@@ -68,6 +73,9 @@ export const videos = [
     publishDate: "12th Mar'21",
     views: "45.2k views",
     subscribers: "484k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -96,6 +104,9 @@ export const videos = [
     publishDate: "7th Feb'19",
     views: "45.2k views",
     subscribers: "231k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -112,7 +123,6 @@ export const videos = [
     ],
   },
 
-  // LATEST VIDEOS
   {
     _id: "TgTxp28P9Jw",
     category: "Sketching",
@@ -125,6 +135,9 @@ export const videos = [
     publishDate: "4th Apr'22",
     views: "45.2k views",
     subscribers: "484k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -153,6 +166,9 @@ export const videos = [
     publishDate: "31st Mar'22",
     views: "12.6k views",
     subscribers: "44k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -181,6 +197,9 @@ export const videos = [
     publishDate: "3rd Apr'22",
     views: "45.2k views",
     subscribers: "484k subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -209,6 +228,9 @@ export const videos = [
     publishDate: "2nd Apr'22",
     views: "125k views",
     subscribers: "1.23M subscribers",
+    isWatchLater: false,
+    isHistroy: false,
+    isPlaylist: false,
     comments: [
       {
         name: "Simran Gangwani",

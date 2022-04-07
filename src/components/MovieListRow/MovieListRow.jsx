@@ -11,7 +11,6 @@ function MovieListRow() {
     () => {
       (async () => {
         const data = await axios.get("/api/videos");
-        // console.log(data.data.videos)
         setMovieList(data.data.videos);
       })()
     }
