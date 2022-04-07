@@ -1,10 +1,7 @@
 import React from "react";
-import { PlaylistVideoRow } from "../../components/PlaylistVideoRow/PlaylistVideoRow";
 import "./history.css";
 import { useFilter } from "../../context/filter-context";
 import { MovieItem } from "../../components/MovieItem/MovieItem";
-// import {useFilter} 
-
 
 function History() {
   const { productState } = useFilter();
@@ -22,7 +19,6 @@ function History() {
           My History ({historyItems.length})
         </h1>
         {/* <EmptyPlaylist /> */}
-        {/* <PlaylistVideoRow /> */}
         {historyItems.map((movie) => (
           <MovieItem movie={movie} />
         ))}

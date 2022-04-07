@@ -1,6 +1,5 @@
 import React from "react";
 import { MovieItem } from "../../components/MovieItem/MovieItem";
-import { PlaylistVideoRow } from "../../components/PlaylistVideoRow/PlaylistVideoRow";
 import { useFilter } from "../../context/filter-context";
 import "./watchLater.css";
 
@@ -33,7 +32,6 @@ function WatchLater() {
           Watch Later({watchlaterItems.length})
         </h1>
         {/* <EmptyPlaylist /> */}
-        {/* <PlaylistVideoRow /> */}
         {watchlaterItems.map((movie) => (
           <MovieItem movie={movie} />
         ))}

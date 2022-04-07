@@ -1,5 +1,4 @@
 export const videos = [
-  // TRENDING VIDEOS
   {
     _id: "o_HyfLLtuKQ",
     category: "Painting",
@@ -124,7 +123,6 @@ export const videos = [
     ],
   },
 
-  // LATEST VIDEOS
   {
     _id: "TgTxp28P9Jw",
     category: "Sketching",

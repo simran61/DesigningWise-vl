@@ -29,8 +29,6 @@ const filterReducer = (filterState, action) => {
       break;
 
     case "ADD_TO_WATCHLATER":
-      console.log(filterStateCopy.product);
-      console.log(action.payload.itemId);
       filterStateCopy = {
         ...filterStateCopy,
         product: [
@@ -45,7 +43,6 @@ const filterReducer = (filterState, action) => {
         ...filterStateCopy,
         default: [...filterStateCopy.product],
       };
-      console.log(filterStateCopy.product);
       break;
 
     case "REMOVE_FROM_WATCHLATER":
@@ -81,7 +78,6 @@ const FilterProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       let response = await axios.get("/api/videos");
-      console.log(response);
       productDispatch({
         type: "UPDATE_PRODUCTS",
         payload: { products: response.data.videos },

@@ -4,11 +4,9 @@ import { Link } from "react-router-dom"
 import { useFilter } from "../../context/filter-context";
 
 function MovieItem({ movie }) {
-  // console.log(movie)
   const { productDispatch } = useFilter();
   console.log(movie)
   const { _id, isWatchLater } = movie;
-  // console.log(itemId)
   return (
 
     <div onClick={() =>
@@ -17,7 +15,6 @@ function MovieItem({ movie }) {
         payload: { itemId: _id },
       })
     } className="movie-list-item">
-      {/* <Link to={"/singleVideo/" + movie._id}> */}
       <div className="img-container">
         <img className="movie-list-item-img" src={`https://i.ytimg.com/vi/${movie._id}/0.jpg`} alt="" />
         <div className="play-img">
@@ -35,7 +32,6 @@ function MovieItem({ movie }) {
             }`}></i>
 
       </div>
-      {/* </Link> */}
       <Link to={"/singleVideo/" + movie._id}>
         <div className="video-desc">
           <img className="channel-img" src={movie.createrProfile} alt="" />
