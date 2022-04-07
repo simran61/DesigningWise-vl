@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import { profile, videoProfile } from "../../assets";
 import { UserComment } from "../UserComment/UserComment";
 import "./video.css";

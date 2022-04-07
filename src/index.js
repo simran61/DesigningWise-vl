@@ -14,6 +14,8 @@ import { WatchLater } from "./pages/WatchLater/WatchLater";
 import { SignUp } from "./pages/Auth/SignUp";
 import { Login } from "./pages/Auth/Login";
 import { Logout } from "./pages/Auth/Logout";
+import { FilterProvider } from "./context/filter-context";
+import Mockman from "mockman-js";
 
 // Call make Server
 makeServer();
@@ -21,18 +23,22 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/singleVideo/:id" element={<SingleVideo />} />
-        <Route path="/videoListing" element={<VideoListing />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/watchLater" element={<WatchLater />} />
-        <Route path="/playlist" element={<Playlist />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
+      <FilterProvider>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/singleVideo/:id" element={<SingleVideo />} />
+          <Route path="/videoListing" element={<VideoListing />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/watchLater" element={<WatchLater />} />
+          <Route path="/playlist" element={<Playlist />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+
+          <Route path="/mockman" element={<Mockman />} />
+        </Routes>
+      </FilterProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
