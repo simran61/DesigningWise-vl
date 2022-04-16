@@ -62,6 +62,44 @@ const filterReducer = (filterState, action) => {
       };
       break;
 
+    case "ADD_TO_PLAYLIST":
+      filterStateCopy = {
+        ...filterStateCopy,
+        product: [
+          ...filterStateCopy.product.map((item) =>
+            item._id === action.payload.itemId
+              ? {
+                  ...item,
+                  isPlaylist: !item.isPlaylist,
+                  playlistName: action.payload.playlistName,
+                }
+              : item
+          ),
+        ],
+      };
+      filterStateCopy = {
+        ...filterStateCopy,
+        default: [...filterStateCopy.product],
+      };
+      break;
+
+    case "REMOVE_FROM_PLAYLIST":
+      filterStateCopy = {
+        ...filterStateCopy,
+        product: [
+          ...filterStateCopy.product.map((item) =>
+            item._id === action.payload.itemId
+              ? { ...item, isPlaylist: false }
+              : item
+          ),
+        ],
+      };
+      filterStateCopy = {
+        ...filterStateCopy,
+        default: [...filterStateCopy.product],
+      };
+      break;
+
     default:
       break;
   }

@@ -5,7 +5,6 @@ import { useFilter } from "../../context/filter-context";
 
 function MovieItem({ movie }) {
   const { productDispatch } = useFilter();
-  console.log(movie)
   const { _id, isWatchLater } = movie;
   return (
 

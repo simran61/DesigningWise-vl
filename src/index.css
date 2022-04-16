@@ -13,6 +13,7 @@
   --dull-black: rgb(51, 51, 51);
   --light-bg: rgb(48, 65, 85);
   --md-bg: rgb(12, 37, 66);
+  --md-bg-trans: rgba(12, 37, 66, 0.501);
   --dark-bg: rgb(10, 18, 31);
   --gold-color: goldenrod;
 }
@@ -38,6 +39,12 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--dark-bg);
+  overflow-x: hidden;
+}
+
+.show_flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .margin_sm {

@@ -5,11 +5,9 @@ import "./watchLater.css";
 
 function WatchLater() {
   const { productState } = useFilter();
-  console.log(productState)
   const watchlaterItems = productState.product.filter(
     (item) => item.isWatchLater
   );
-  console.log(watchlaterItems)
   return (
     <div className="container">
       <div className="content-container">
@@ -29,12 +27,14 @@ function WatchLater() {
               d="M12.5 7H11v6l5.25 3.15l.75-1.23l-4.5-2.67z"
             ></path>
           </svg>
-          Watch Later({watchlaterItems.length})
+          Watch Later ({watchlaterItems.length})
         </h1>
         {/* <EmptyPlaylist /> */}
-        {watchlaterItems.map((movie) => (
-          <MovieItem movie={movie} />
-        ))}
+        <div className="show_flex">
+          {watchlaterItems.map((movie) => (
+            <MovieItem movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );
