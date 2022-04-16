@@ -19,9 +19,11 @@ function History() {
           My History ({historyItems.length})
         </h1>
         {/* <EmptyPlaylist /> */}
-        {historyItems.map((movie) => (
-          <MovieItem movie={movie} />
-        ))}
+        <div className="show_flex">
+          {historyItems.map((movie) => (
+            <MovieItem movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );

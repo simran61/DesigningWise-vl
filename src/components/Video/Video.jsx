@@ -1,10 +1,15 @@
-import { React } from "react";
+import { useState } from "react";
 import { profile, videoProfile } from "../../assets";
 import { UserComment } from "../UserComment/UserComment";
+import { Modal } from '../Modal/Modal'
 import "./video.css";
+import { useFilter } from "../../context/filter-context";
 
 function Video({ video }) {
+  const { productDispatch } = useFilter();
+  const { isLiked } = video;
   var comments = video.comments
+  const [modal, setModal] = useState(false)
   return (
     <div className="single-video-container">
       <div className="show-video">
@@ -30,6 +35,8 @@ function Video({ video }) {
               />
               Like
             </button>
+
+
             <button className="btn btn-active btn-video">
               <img
                 className="video-icon-btn"
@@ -37,20 +44,28 @@ function Video({ video }) {
               />
               Dislike
             </button>
-            <button className="btn btn-active btn-video">
-              <img
-                className="video-icon-btn"
-                src="https://img.icons8.com/material-outlined/48/ffffff/clock--v1.png"
-              />
-              Watch Later
-            </button>
-            <button className="btn btn-active btn-video">
+
+            <button
+              onClick={() => {
+                setModal(true)
+                console.log('click')
+                setModal(pre => {
+                  console.log(pre);
+                  return pre
+                })
+              }
+              }
+              className="btn btn-active btn-video">
               <img
                 className="video-icon-btn"
                 src="https://img.icons8.com/ios/50/ffffff/playlist.png"
               />
               Playlist
             </button>
+            {
+              modal ? <Modal setModal={setModal} _id={video._id} /> : null
+            }
+
             <button className="btn btn-active btn-video">
               <img
                 className="video-icon-btn"
@@ -94,7 +109,7 @@ function Video({ video }) {
           <hr noshade />
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
