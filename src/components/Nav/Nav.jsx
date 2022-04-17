@@ -55,40 +55,40 @@ function Nav() {
       </div>
 
       <div className="sidebar">
-        <a href="#">
+        <Link to="/">
           <img
             className="left-menu-icon"
             src="https://img.icons8.com/windows/64/ffffff/home-page.png"
           />
-        </a>
+        </Link>
 
-        <a href="./videoListing/videoListing.html">
+        <Link to="/videoListing">
           <img
             className="left-menu-icon"
             src="https://img.icons8.com/material-outlined/48/ffffff/circled-play.png"
           />
-        </a>
+        </Link>
 
-        <a href="./playlist/playlist.html">
+        <Link to="/playlist">
           <img
             className="left-menu-icon"
             src="https://img.icons8.com/ios/50/ffffff/playlist.png"
           />
-        </a>
+        </Link>
 
-        <a href="./watchLater/watchLater.html">
+        <Link to="/watchLater">
           <img
             className="left-menu-icon"
             src="https://img.icons8.com/material-outlined/48/ffffff/clock--v1.png"
           />
-        </a>
+        </Link>
 
-        <a href="./history/history.html">
+        <Link to="/history">
           <img
             className="left-menu-icon"
             src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/ffffff/external-history-essentials-tanah-basah-basic-outline-tanah-basah.png"
           />
-        </a>
+        </Link>
       </div>
     </div>
   );

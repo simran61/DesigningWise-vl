@@ -1,5 +1,6 @@
 import React from 'react'
 import './auth.css'
+import { Link } from "react-router-dom";
 
 function Login() {
     return (
@@ -27,8 +28,8 @@ function Login() {
                 <a href="#" className="bold forgot_link">Forgot Password ?</a>
             </div>
             <button className="btn btn_primary btn_rounded btn_center"><a href="">Login</a></button>
-            <p className="block"><a href="#">Create new account <img src="https://img.icons8.com/external-those-icons-fill-those-icons/12/ffffff/external-right-arrows-those-icons-fill-those-icons-3.png" />
-            </a></p>
+            <p className="block"><Link to="/signup">Create new account <img src="https://img.icons8.com/external-those-icons-fill-those-icons/12/ffffff/external-right-arrows-those-icons-fill-those-icons-3.png" />
+            </Link></p>
         </div>
     )
 }

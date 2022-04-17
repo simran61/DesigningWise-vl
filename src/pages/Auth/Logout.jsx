@@ -1,5 +1,6 @@
 import React from 'react'
 import './auth.css'
+import { Link } from "react-router-dom";
 
 function Logout() {
     return (
@@ -14,9 +15,8 @@ function Logout() {
             </label>
 
             <button className="btn btn_primary btn_rounded btn_center"><a href="">Logout</a></button>
-            <p className="block"><img src="https://img.icons8.com/external-those-icons-fill-those-icons/12/ffffff/external-left-arrows-those-icons-fill-those-icons-4.png" /> <a href="#">Take Me Back
-            </a></p>
-        </div>
+            <p className="block"><img src="https://img.icons8.com/external-those-icons-fill-those-icons/12/ffffff/external-left-arrows-those-icons-fill-those-icons-4.png" /> <Link to="/login">Take me to login page</Link></p>
+        </div >
     )
 }
 
