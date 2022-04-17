@@ -31,6 +31,7 @@
 }
 
 .btn-video {
+  font-weight: 500;
   font-size: 1rem;
   display: flex;
   align-items: center;
