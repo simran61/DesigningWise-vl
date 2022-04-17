@@ -47,7 +47,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Yashika Shukla",
@@ -80,7 +79,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -113,7 +111,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -146,7 +143,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -179,7 +175,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -212,7 +207,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Simran Gangwani",
@@ -245,7 +239,6 @@ export const videos = [
     isHistroy: false,
     isPlaylist: false,
     playlistName: "",
-    isLiked: false,
     comments: [
       {
         name: "Simran Gangwani",
