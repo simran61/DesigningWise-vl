@@ -21,7 +21,7 @@ function Playlist() {
           My Playlist ({playlistItems.length})
         </h1>
         {/* <EmptyPlaylist /> */}
-        <h2 className="movie-list-title mr_top">{playlistItems.length === 0 ? 'helooooo' : playlistItems[0].playlistName}</h2>
+        <h2 className="movie-list-title mr_top">{playlistItems.length === 0 ? 'Empty Playlist! Please add something.' : playlistItems[0].playlistName}</h2>
 
         <div className="show_flex">
           {playlistItems.map((movie) => (

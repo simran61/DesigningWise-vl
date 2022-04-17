@@ -7,9 +7,45 @@ import { useFilter } from "../../context/filter-context";
 
 function Video({ video }) {
   const { productDispatch } = useFilter();
-  const { isLiked } = video;
   var comments = video.comments
   const [modal, setModal] = useState(false)
+
+  const [like, setlike] = useState(128);
+  const [dislike, setdislike] = useState(6);
+
+  const [likeactive, setlikeactive] = useState(false);
+  const [dislikeactive, setdislikeactive] = useState(false);
+
+  function likef() {
+    if (likeactive) {
+      setlikeactive(false);
+      setlike(like - 1);
+    } else {
+      setlikeactive(true);
+      setlike(like + 1);
+      if (dislikeactive) {
+        setdislikeactive(false);
+        setlike(like + 1);
+        setdislike(dislike - 1);
+      }
+    }
+  }
+
+  function dislikef() {
+    if (dislikeactive) {
+      setdislikeactive(false);
+      setdislike(dislike - 1);
+    } else {
+      setdislikeactive(true);
+      setdislike(dislike + 1);
+      if (likeactive) {
+        setlikeactive(false);
+        setdislike(dislike + 1);
+        setlike(like - 1);
+      }
+    }
+  }
+
   return (
     <div className="single-video-container">
       <div className="show-video">
@@ -28,29 +64,31 @@ function Video({ video }) {
           <h2 className="video-title">{video.title}</h2>
           <div className="video-info fs-sm">{video.views} | {video.publishDate}</div>
           <div className="video-btns">
-            <button className="btn btn-active btn-video">
+
+            <button onClick={likef}
+              className={[likeactive ? "active-like" : null, "count_btn"].join(" ")}>
               <img
                 className="video-icon-btn"
                 src="https://img.icons8.com/windows/32/ffffff/like--v1.png"
               />
-              Like
+              {like} Likes
             </button>
 
-
-            <button className="btn btn-active btn-video">
+            <button onClick={dislikef}
+              className={[dislikeactive ? "active-dislike" : null, "count_btn"].join(
+                " "
+              )}>
               <img
                 className="video-icon-btn"
                 src="https://img.icons8.com/external-tanah-basah-detailed-outline-tanah-basah/48/ffffff/external-dislike-user-interface-tanah-basah-detailed-outline-tanah-basah.png"
               />
-              Dislike
+              {dislike} Dislikes
             </button>
 
             <button
               onClick={() => {
                 setModal(true)
-                console.log('click')
                 setModal(pre => {
-                  console.log(pre);
                   return pre
                 })
               }
