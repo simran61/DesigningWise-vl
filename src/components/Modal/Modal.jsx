@@ -7,21 +7,25 @@ import './modal.css'
 let demo = '';
 
 function Modal({ setModal, _id }) {
-    const { productDispatch } = useFilter()
+    const { productDispatch, productState } = useFilter()
 
     const [inputList, setInputList] = useState("");
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState([...productState.playlist]);
 
     const itemEvent = (event) => {
         setInputList(event.target.value);
     };
+
+
+
 
     function listOfItems() {
         setItems((oldItems) => {
             return [...oldItems, inputList];
         });
         demo = inputList;
-        setInputList("")
+        productDispatch({ type: "ADD_PLAYLIST_NAME", payload: { playlistName: inputList } })
+        // setInputList("")
     }
 
     const deleteItems = (id) => {
@@ -34,6 +38,7 @@ function Modal({ setModal, _id }) {
     }
 
 
+    console.log(productState)
     return (
         <div id="" class="modal">
             <div class="modal-content">
