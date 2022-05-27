@@ -83,6 +83,17 @@ const filterReducer = (filterState, action) => {
       };
       break;
 
+    case "ADD_PLAYLIST_NAME":
+      filterStateCopy = {
+        ...filterStateCopy,
+        playlist: [...filterStateCopy.playlist, action.payload.playlistName],
+      };
+      filterStateCopy = {
+        ...filterStateCopy,
+        default: [...filterStateCopy.product],
+      };
+      break;
+
     case "REMOVE_FROM_PLAYLIST":
       filterStateCopy = {
         ...filterStateCopy,
@@ -111,6 +122,7 @@ const FilterProvider = ({ children }) => {
   const [productState, productDispatch] = useReducer(filterReducer, {
     product: [],
     default: [],
+    playlist: [],
   });
 
   useEffect(() => {
